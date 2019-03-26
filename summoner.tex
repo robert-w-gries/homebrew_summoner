@@ -1,0 +1,91 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[letterpaper,10pt,twoside,twocolumn,openany]{dndbook}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{listings}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+
+\begin{document}
+
+\section{Summoner}
+
+Surrounded and seemingly doomed, a human's eyes roll back as he stretches his hands towards the sky, materializing a winged celestial out of nothing to tower over his foes.
+
+  A ravenous fury explodes from a tiefling's every pore. She quickly regains control and redirects this energy towards her enemy. From her fingertips, ten dark strands tether to the ground, pulling a beast from the depths into her fight.
+
+  Summoners draw on the strength of their conjured familiar for both power and protection. In exchange, these creatures expect something in return. As the summoner and conjured grow in experience, the summoner's control seems to weaken.
+
+\subsection{A Mutually Beneficial Deal}
+\lipsum[3]
+
+\subsection{Creating a Summoner}
+\lipsum[3]
+
+\subsubsection{Quick Build}
+\lipsum[1]
+
+\begin{paperbox}[float=!t]{Behold, the Paperbox!}
+  The \lstinline!paperbox! is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+\end{paperbox}
+
+% For more columns, you can say \begin{dndtable}[your options here].
+% For instance, if you wanted three columns, you could say
+% \begin{dndtable}[XXX]. The usual host of tabular parameters are
+% available as well.
+\header{The Summoner}
+\begin{table*}
+  \begin{dndtable}[XXXXXXXX]
+      \textbf{Level} & \textbf{Proficiency Bonus} & \textbf{Features} & \textbf{1st} & \textbf{2nd} & \textbf{3rd} & \textbf{4th} & \textbf{5th} \\
+      1st & +2 & Sit on Hands & --- & --- & --- & --- & --- \\
+      2nd & +2 & --- & 2 & --- & --- & --- & --- \\
+      3rd & +2 & --- & 3 & --- & --- & --- & --- \\
+      4th & +2 & ASI & 3 & --- & --- & --- & --- \\
+      5th & +3 & --- & 4 & 2 & --- & --- & --- \\
+      6th & +3 & --- & 4 & 2 & --- & --- & --- \\
+      7th & +3 & --- & 4 & 3 & --- & --- & --- \\
+      8th & +3 & ASI & 4 & 3 & --- & --- & --- \\
+      9th & +4 & --- & 4 & 3 & 2 & --- & --- \\
+      10th & +4 & --- & 4 & 3 & 2 & --- & --- \\
+      11th & +4 & --- & 4 & 3 & 3 & --- & --- \\
+      12th & +4 & ASI & 4 & 3 & 3 & --- & --- \\
+      13th & +5 & --- & 4 & 3 & 3 & 1 & --- \\
+      14th & +5 & --- & 4 & 3 & 3 & 1 & --- \\
+      15th & +5 & --- & 4 & 3 & 3 & 2 & --- \\
+      16th & +5 & ASI & 4 & 3 & 3 & 2 & --- \\
+      17th & +6 & --- & 4 & 3 & 3 & 3 & 1 \\
+      18th & +6 & --- & 4 & 3 & 3 & 3 & 1 \\
+      19th & +6 & ASI & 4 & 3 & 3 & 3 & 2 \\
+      20th & +6 & Special Feature & 4 & 3 & 3 & 3 & 2
+  \end{dndtable}
+\end{table*}
+
+\section{Spells}
+
+\begin{spell}
+  {Beautiful Typesetting}
+  {4th-level illusion}
+  {1 action}
+  {5 feet}
+  {S, M (ink and parchment, which the spell consumes)}
+  {Until dispelled}
+  You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+
+  While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+\end{spell}
+
+\lipsum[2]
+
+\end{document}
